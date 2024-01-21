@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  db:
+    image: mariadb
+    container_name: url_shortener
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_DATABASE=url_shortener
+    volumes:
+      - ./db/data:/var/lib/mysql
+    ports:
+      - 3306:3306
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: pma
+    links:
+      - db
+    environment:
+      - PMA_HOST=db
+      - PMA_PORT=3306
+      - PMA_ARBITRARY=1
+    restart: always
+    ports:
+      - 5050:80
+    volumes:
+      - ./db/data:/var/lib/phpmyadmin
