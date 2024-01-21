@@ -3,7 +3,7 @@ const path = require('path');
 const cors = require('cors');
 const mainRouter = require('./routes');
 
-const PORT = 3001;
+const PORT = 3000;
 
 const app = express();
 const router = express.Router();
