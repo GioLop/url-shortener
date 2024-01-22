@@ -1,9 +1,9 @@
 FROM node:18.16.0-alpine3.17
-RUN mkdir -p /opt/client
-WORKDIR /opt/client
+RUN mkdir -p /home/node/client
+RUN chown -R node:node /home/node/client && chmod -R 770 /home/node/client/
+WORKDIR /home/node/client
 COPY package*.json ./
-RUN npm install --force
-RUN npm install --save react-scripts
+RUN npm install
 COPY . .
 EXPOSE 3000
 CMD [ "npm", "start"]

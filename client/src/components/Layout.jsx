@@ -5,8 +5,8 @@ import {
 const Layout = () => {
   return (
     <div>
-      <h1>Short URL</h1>
-      <main>
+      <h1 className="heading1">Short URL</h1>
+      <main className="main-box">
         <Outlet />
       </main>
     </div>

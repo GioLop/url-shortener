@@ -29,9 +29,14 @@ services:
     build:
       context: ./client
     depends_on:
+      - db
       - backend
     volumes:
-      - ./client/src:/opt/client/src
-
+      - ./client/src:/home/node/client/src
+      - ./client/public:/home/node/client/public
+      - node_modules:/home/node/client/node_modules
     ports:
       - 3000:3000
+
+volumes:
+  node_modules:

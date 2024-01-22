@@ -11,13 +11,24 @@ const Shortener = (props) => {
 
   return (
     <>
-      <h2>Your shortened URL</h2>
-      <p>Copy the short link and share it in messages, texts, posts, websites and other locations.</p>
+      <h2 className='heading2'>Your shortened URL</h2>
+      <p className='body-text center-text'>Copy the short link and share it in messages, texts, posts, websites and other locations.</p>
       <div>
-        <input defaultValue={shortUrl} />
-        <button variant="contained" onClick={handleButtonClick}>Copy URL</button>
-        <div>Long URL: 
-          <a href={props.longUrl} target={'_blank'} rel="noreferrer">
+        <input 
+          defaultValue={shortUrl}
+          className='input-box'/>
+        <button 
+          variant="contained"
+          onClick={handleButtonClick}
+          className='button'>Copy URL</button>
+        <div>
+          <p className='body-text center-text'>
+            Long URL:
+          </p> 
+          <a href={props.longUrl}
+             target={'_blank'}
+             rel="noreferrer"
+             className='link'>
             {props.longUrl}
           </a>
         </div>

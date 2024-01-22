@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useParams } from "react-router-dom";
-import getUrlById from '../utils/getUrlById';
-import updateUrlVisits from '../utils/updateUrlVisits';
+import getUrlById from '../utils/networking/getUrlById';
+import updateUrlVisits from '../utils/networking/updateUrlVisits';
 
 const Id = () => {
   const { id } = useParams();
