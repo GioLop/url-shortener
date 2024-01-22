@@ -10,7 +10,7 @@ It stores the information in a mysql database.
 
 # Requirements
 
-This app is wrapped in three different Docker containers, be sure you have Docker Desktop running in you machine, if you need more information about how to install Docker Desktop please [visit the offical documentation](https://docs.docker.com/desktop/).
+This app is wrapped in three different Docker containers, be sure you have Docker Desktop running in your machine, if you need more information about how to install Docker Desktop please [visit the offical documentation](https://docs.docker.com/desktop/).
 
 # Installation
 
