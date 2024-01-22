@@ -18,7 +18,7 @@ const Home = () => {
   const handleButtonClick = async (event) => {
     event.preventDefault();
     const isValidUrl = validateUrl(url);
-
+    
     if (isValidUrl) {
       setSettingShortUrl(true);
       setHasError(false);

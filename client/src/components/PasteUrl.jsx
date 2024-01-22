@@ -2,7 +2,6 @@ import * as React from 'react';
 import MostVisitedText from './MostVistedText';
 
 const PasteUrl = (props) => {
-  console.log(props.hasError);
   return (
     <>
       <p className='body-text center-text'>Paste the URL to be shortened</p>

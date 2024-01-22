@@ -9,9 +9,13 @@ const getMostVisited = require('../../controllers/getMostVisited');
 const apiRouter = express.Router();
 
 apiRouter.post('/', setShortUrl);
+
 apiRouter.get('/', getMostVisited);
+
 apiRouter.get('/:id', getFullUrl);
+
 apiRouter.put('/:id', updateUrl);
+
 apiRouter.delete('/:id', deleteUrl);
 
 module.exports = apiRouter;

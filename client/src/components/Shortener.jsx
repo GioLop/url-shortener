@@ -21,8 +21,8 @@ const Shortener = (props) => {
           variant="contained"
           onClick={handleButtonClick}
           className='button'>Copy URL</button>
-        <div>
-          <p className='body-text center-text'>
+        <div className='center-text'>
+          <p className='body-text'>
             Long URL:
           </p> 
           <a href={props.longUrl}
